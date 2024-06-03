@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="toggleImage" src="buh.gif" alt="Image" width="500" height="300">
+
+    <script>
+        const imageElement = document.getElementById('toggleImage');
+        const image1 = 'buh.gif';
+        const image2 = 'guh.gif';
+
+        imageElement.addEventListener('click', () => {
+            imageElement.src = imageElement.src.endsWith(image1) ? image2 : image1;
+        });
+    </script>
+</body>
+</html>
